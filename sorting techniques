@@ -31,3 +31,35 @@ int main()
     }
     return 0;
 }
+
+
+
+#//INSERTION SORT
+include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[5]={90,23,65,1,45};
+    int current,j;
+    for(int i=1;i<(sizeof(a)/sizeof(int));i++)
+    {
+        current=a[i];
+        j=i-1;
+        while(a[j]>current && j>=0)
+        {
+            a[j+1]=a[j];
+            j--;
+        }
+        a[j+1]=current;
+    }
+    
+    
+    for(int i=0;i<(sizeof(a)/sizeof(int));i++)
+    {
+        std::cout << a[i] << std::endl;
+    }
+
+return 0;
+}
